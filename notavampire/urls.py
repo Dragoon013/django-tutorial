@@ -20,3 +20,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^polls/',include('polls.urls'))
 ]
+
+handler404 = 'notavampire.views.page_not_found'
