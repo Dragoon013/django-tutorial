@@ -1,0 +1,8 @@
+li, a {
+    color:orange;
+}
+
+body {
+    background: white url("imgs/black_wood.jpg") no-repeat right bottom;
+    background-size: 100% 100%;
+}

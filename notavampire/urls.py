@@ -22,3 +22,4 @@ urlpatterns = [
 ]
 
 handler404 = 'notavampire.views.page_not_found'
+handler500 = 'notavampire.views.handler500'
