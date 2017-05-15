@@ -2,8 +2,8 @@
 
 This is practice for setting up a full site in Python using django.
 
-## Set-up DB
-psql
+## DB Set-up
+psql /n
 create user notavampire with password 'secretsauce';
 create database notavampire;
 grant all on database notavampire to notavampire;
