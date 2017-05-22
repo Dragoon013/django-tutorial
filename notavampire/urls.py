@@ -15,12 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from notavampire.views import IndexView
+from notavampire.views import IndexView, NavFetch, DepFetch
 
 urlpatterns = [
     url(r'^$', IndexView.as_view(), name='index'),
     url(r'^admin/', admin.site.urls),
     url(r'^polls/',include('polls.urls')),
+    url(r'^nav/', NavFetch.as_view(), name='nav'),
+    url(r'^loaddep/', DepFetch.as_view(), name='loaddep'),
+
 ]
 handler404 = 'notavampire.views.page_not_found'
 handler500 = 'notavampire.views.handler500'

@@ -15,3 +15,9 @@ def handler500(request):
 
 class IndexView(TemplateView):
         template_name = "notavampire/index.html"
+
+class NavFetch(TemplateView):
+        template_name = "notavampire/nav.html"
+
+class DepFetch(TemplateView):
+        template_name = "notvampire/loaddep.html"
