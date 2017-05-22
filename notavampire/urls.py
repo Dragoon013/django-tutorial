@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from notavampire.views import IndexView, NavFetch, DepFetch
+from notavampire.views import *
 
 urlpatterns = [
     url(r'^$', IndexView.as_view(), name='index'),
@@ -23,7 +23,9 @@ urlpatterns = [
     url(r'^polls/',include('polls.urls')),
     url(r'^nav/', NavFetch.as_view(), name='nav'),
     url(r'^loaddep/', DepFetch.as_view(), name='loaddep'),
-
+    url(r'^about/', AboutFetch.as_view(), name='about'),
+    url(r'^footer/', FooterFetch.as_view(), name='footer'),
+    url(r'^contact/', ContactFetch.as_view(), name='contact'),    
 ]
 handler404 = 'notavampire.views.page_not_found'
 handler500 = 'notavampire.views.handler500'

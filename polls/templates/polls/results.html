@@ -1,11 +1,20 @@
 {% include "notavampire/nav.html" %}
 {% include "notavampire/loaddep.html" %}
-<h1>{{ question.question_text }}</h1>
 
-<ul>
-  {% for choice in question.choice_set.all %}
-  <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
-  {% endfor %}
-</ul>
+
+<section class="page">
+  <div class="container">
+    <h1>Results</h1>
+    <h3>{{ question.question_text }}</h3>
+
+    <ul>
+      {% for choice in question.choice_set.all %}
+      <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+      {% endfor %}
+    </ul>
 
 <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+  </div>
+</section>
+
+{% include "notavampire/footer.html" %}

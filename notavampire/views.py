@@ -20,4 +20,13 @@ class NavFetch(TemplateView):
         template_name = "notavampire/nav.html"
 
 class DepFetch(TemplateView):
-        template_name = "notvampire/loaddep.html"
+        template_name = "notavampire/loaddep.html"
+
+class AboutFetch(TemplateView):
+        template_name = "notavampire/about.html"
+
+class FooterFetch(TemplateView):
+        template_name = "notavampire/footer.html"
+
+class ContactFetch(TemplateView):
+        template_name = "notavampire/contact.html"
